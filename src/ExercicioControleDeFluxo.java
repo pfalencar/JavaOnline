@@ -6,7 +6,7 @@ salário >= 2000  && salario < 4000 => 15%
 salário > 5000 => 20%
  */
 public class ExercicioControleDeFluxo {
-    float salario = 700f;
+    float salario = 1000f;
     float imposto;
 
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class ExercicioControleDeFluxo {
 
     //O compilador vai executar todos os ifs
     public void exercicioIf() {
-        if (salario < 1000) {
+        if (salario <= 1000) {
             imposto = (float) (salario * 0.05);
             System.out.println("Entrou no primeiro if");
 
@@ -32,7 +32,7 @@ public class ExercicioControleDeFluxo {
 
         }
         if (salario >= 1000 && salario < 2000) {
-            imposto = (float) (salario * 0.10);
+            //imposto = (float) (salario * 0.10);
             System.out.println("Entrou no segundo if");
 
         }
