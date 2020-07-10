@@ -36,4 +36,25 @@ public class Calculadora {
         System.out.println("num2 = " + b);
     }
 
+    public void somaArray (int[] numeros) {
+        int soma = 0;
+        for (int numero : numeros) {
+            soma += numero;
+        }
+        System.out.println(soma);
+    }
+
+    //com varArgs posso passar um array ou os números separados por vírgula, tanto faz.
+    //REGRAS: só posso ter 1 VarArgs por assinatura de método Ex.: (int... numeros, String... nomes), já não funciona.
+    //O VarArgs precisa ser o último parâmetro. Ex.: (int valor, int... numeros)
+    //int... numeros  =  int[] numeros ou int numeros[]
+    public void somaVarArgs(String nome, double valor, int... numeros) {
+        int soma = 0;
+        for (int numero : numeros) {
+            soma += numero;
+        }
+        System.out.println(soma + valor);
+        System.out.println("nome: " + nome);
+    }
+
 }

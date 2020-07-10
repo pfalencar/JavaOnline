@@ -7,12 +7,10 @@ public class Professor {
     public String cpf;
     //Ctrl + d  copia a linha igualzinha que está em cima
 
-    public void imprime(Professor aux) {
-        System.out.println(aux.cpf);
-        System.out.println(aux.nome);
-        System.out.println(aux.matricula);
-        System.out.println(aux.rg);
-        aux.nome = "Nome alterado no imprime";
-        System.out.println(aux.nome);
+    public void imprime() {
+        System.out.println(this.nome);
+        System.out.println(this.cpf);
+        System.out.println(this.rg);
+        System.out.println(this.matricula);
     }
 }
