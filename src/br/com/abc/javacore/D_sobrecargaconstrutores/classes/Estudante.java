@@ -9,6 +9,10 @@ public class Estudante {
     private double[] notas;
     private String dataMatricula;
 
+    public Estudante() {
+        System.out.println("Dentro do construtor default!");
+    }
+
     public Estudante(String matricula, String nome, double[] notas) {
         this.matricula = matricula;
         this.nome = nome;
@@ -19,10 +23,6 @@ public class Estudante {
         //this(); //chama o construtor que não recebe parâmetro
         this(matricula, nome, notas); // chama o construtor que recebe esses 3 parâmetros
         this.dataMatricula = dataMatricula;
-    }
-
-    public Estudante() {
-        System.out.println("Dentro do construtor default!");
     }
 
     public void print() {
