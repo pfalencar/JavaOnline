@@ -1,18 +1,40 @@
 package br.com.abc.javacore.H_heranca.classes;
-
+/*ORDEM DE EXECUÇÃO NA SUBCLASSE:
+0-Bloco de inicialização ESTÁTICO de Pessoa
+1-Bloco de inicialização ESTÁTICO de Funcionário
+2-Blocos de inicialização não-estáticos da Classe Pessoa (na ordem em que aparecem na classe Pessoa)
+3-Construtor da Classe Pessoa (o Java escolhe aquele com a qtde e tipo do parâmetro enviado pela main)
+4-Blocos de inicialização não-estáticos da Classe Funcionário (na ordem em que aparecem na classe Pessoa)
+5-Construtor da Classe Funcionário (o Java escolhe aquele com a qtde e tipo do parâmetro enviado pela main)
+ */
 public class Funcionario extends Pessoa{
     private double salario;
 
-    public Funcionario() {
+    public Funcionario(String nome) {
+        super(nome);
+        System.out.println("Dentro do construtor da classe Funcionário");
     }
 
-    public Funcionario(double salario) {
+    public Funcionario(String nome, double salario) {
+        super(nome);
         this.salario = salario;
     }
 
     public Funcionario(String nome, String cpf, Endereco endereco, double salario) {
         super(nome, cpf, endereco);
         this.salario = salario;
+    }
+
+    {
+        System.out.println("Dentro do bloco de inicialização de funcionário 1");
+    }
+
+    {
+        System.out.println("Dentro do bloco de inicialização de funcionário 2");
+    }
+
+    static {
+        System.out.println("Dentro do bloco de inicialização estático de funcionário");
     }
 
     //sobreescrita do método print() da classe Pessoa

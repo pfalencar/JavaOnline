@@ -14,12 +14,6 @@ public class Endereco {
 
     public void print(){
         System.out.println("Rua: " + this.rua);
-        Pessoa pessoa = new Pessoa();
-        pessoa.nome = "Laís";
-        pessoa.cpf = "1234";
-        pessoa.endereco = new Endereco("Rua Amazonas", "Bairro do Lmão");
-
-        pessoa.print();
     }
 
     public String getRua() {
