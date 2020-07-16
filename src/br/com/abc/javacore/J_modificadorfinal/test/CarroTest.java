@@ -11,9 +11,9 @@ public class CarroTest {
 //        Carro.VELOCIDADE_LIMITE = 280;
 //        System.out.println(c);
 
-        System.out.println(car.getComprador());
-        car.getComprador().setNome("Manuela");
-        System.out.println(car.getComprador());
+        System.out.println(car.getCOMPRADOR());
+        car.getCOMPRADOR().setNome("Manuela");
+        System.out.println(car.getCOMPRADOR());
 //        car.comprador = new Comprador();
 
     }
